@@ -180,6 +180,8 @@ text-align: center;
 margin: 20px 0;
 }
 
+
+
 .support-button {
 display: inline-block;
 padding: 10px 20px;
@@ -195,14 +197,22 @@ display: none;
 margin-top: 10px;
 }
 
-.payment-options button {
+.payment-options a {
 display: block;
 margin: 5px 0;
 padding: 10px;
 width: 100%;
 background-color: #f8f9fa;
 border: 1px solid #007bff;
+color: #007bff;
+text-align: center;
+text-decoration: none;
 cursor: pointer;
+}
+
+.payment-options a:hover {
+background-color: #007bff;
+color: white;
 }
 
     .button {
@@ -256,13 +266,13 @@ background-color: #0056b3;
    <p>My name is Md. Jafor Ahmad, and I have dedicated my career to mastering technologies like ASP.NET Core 9.0, Azure Portal, and Microsoft Entra ID P2. Despite my commitment and countless hours of work, recent events beyond my control have led to significant business setbacks and have taken a toll on my health.</p>
 <p>However, I am a firm believer in the power of community and the potential for collective support to make a difference. I have several innovative business plans that I am confident will be successful. All I need is a little financial boost to get back on track and bring these ideas to fruition. Your support, whether through a small donation or by offering technology-related work, would be a lifeline for me at this time.</p>
 
-    <button class="support-button" onclick="togglePaymentOptions()">Support me</button>
+<button class="support-button" onclick="togglePaymentOptions()">Support me</button>
 <div class="payment-options" id="paymentOptions">
-<button>Pay by VISA</button>
-<button>Pay by AMEX</button>
-<button>Pay by PayPal</button>
-<button>Pay by Bank Transfer</button>
-<button>Pay by Bkash</button>
+<a href="https://visa.com" target="_blank">Pay by VISA</a>
+<a href="https://amex.com" target="_blank">Pay by AMEX</a>
+<a href="https://paypal.com" target="_blank">Pay by PayPal</a>
+<a href="https://yourbank.com" target="_blank">Pay by Bank Transfer</a>
+<a href="https://bkash.com" target="_blank">Pay by Bkash</a>
 </div>
     <p><strong></strong> You can make a payment from anywhere using any legitimate method. As a member of the Stripe and VISA Insider communities, I am capable of receiving payments from any location through any legal means.</p>
     <p>Your assistance means more than just financial help; it represents a belief in my abilities and a helping hand.</p>
@@ -288,22 +298,13 @@ background-color: #0056b3;
     <img src="https://mj-ahmad.github.io/he/img/wa.png" alt="WhatsApp" class="whatsapp-icon">
 </a>
 </footer>
- <script>
+<script>
 function togglePaymentOptions() {
 var paymentOptions = document.getElementById('paymentOptions');
 if (paymentOptions.style.display === 'none' || paymentOptions.style.display === '') {
 paymentOptions.style.display = 'block';
 } else {
 paymentOptions.style.display = 'none';
-}
-}
-
-function toggleMenu() {
-var nav = document.querySelector('header nav ul');
-if (nav.style.display === 'flex') {
-nav.style.display = 'none';
-} else {
-nav.style.display = 'flex';
 }
 }
 </script>
