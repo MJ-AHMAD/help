@@ -348,5 +348,26 @@ paymentOptions.style.display = 'none';
 
   gtag('config', 'AW-16726892455');
 </script>
+<!-- Event snippet for Support Now conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16726892455/o212CPC_xNkZEKe_gKg-',
+      'value': 10.0,
+      'currency': 'USD',
+      'transaction_id': '',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+        
 </body>
 </html>
